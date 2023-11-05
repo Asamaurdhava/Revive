@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learning Assistant</h1>
+
+    <div id="output"></div>
+
+    <script>
+        function LBeginner(learned, beginners) {
+            const index = beginners.indexOf(learned);
+            let output = '';
+            if (learned === beginners[beginners.length - 1]) {
+                output += 'You are good with Level Beginner!';
+            } else {
+                output += '<p>You have to learn topics:</p>';
+                for (let i = index + 1; i < beginners.length; i++) {
+                    output += '<p>' + beginners[i] + '</p>';
+                }
+            }
+            output += '<p>You also have to brush up topics:</p>';
+            if (learned === beginners[0]) {
+                output += '<p>' + beginners[0] + '</p>';
+            } else {
+                for (let i = index; i >= 0; i--) {
+                    output += '<p>' + beginners[i] + '</p>';
+                }
+            }
+            document.getElementById('output').innerHTML = output;
+        }
+
+        function LIntermediate(learned, intermediates) {
+            const index = intermediates.indexOf(learned);
+            let output = '';
+            if (learned === intermediates[intermediates.length - 1]) {
+                output += 'You are good with Level Intermediate, revise Level Beginner once!';
+            } else {
+                output += '<p>You have to learn topics:</p>';
+                for (let i = index + 1; i < intermediates.length; i++) {
+                    output += '<p>' + intermediates[i] + '</p>';
+                }
+            }
+            output += '<p>You also have to brush up Level Intermediate topics:</p>';
+            if (learned === intermediates[0]) {
+                output += '<p>' + intermediates[0] + '</p>';
+            } else {
+                for (let i = index; i >= 0; i--) {
+                    output += '<p>' + intermediates[i] + '</p>';
+                }
+            }
+            document.getElementById('output').innerHTML = output;
+        }
+
+        function LAdvanced(learned, advances) {
+            const index = advances.indexOf(learned);
+            let output = '';
+            if (learned === advances[advances.length - 1]) {
+                output += 'You are good with Level Advance, revise Level Beginner & Intermediate once!';
+            } else {
+                output += '<p>You have to learn topics:</p>';
+                for (let i = index + 1; i < advances.length; i++) {
+                    output += '<p>' + advances[i] + '</p>';
+                }
+            }
+            output += '<p>You also have to brush up Level Advanced topics:</p>';
+            if (learned === advances[0]) {
+                output += '<p>' + advances[0] + '</p>';
+            } else {
+                for (let i = index; i >= 0; i--) {
+                    output += '<p>' + advances[i] + '</p>';
+                }
+            }
+            document.getElementById('output').innerHTML = output;
+        }
+
+        function selectLevel() {
+            const level = document.getElementById('levelSelect').value;
+            const topic = document.getElementById('topicSelect').value;
+
+            const beginners = ['syntax', 'variables', 'data types', 'operators', 'control flow', 'strings', 'exception', 'files', 'oop', 'inheritance', 'polymorphism'];
+            const intermediates = ['collections', 'generics', 'reflection', 'annotation', 'junit', 'mockito', 'hamcrest', 'springboot', 'hibernate', 'jpa', 'servlet', 'jsp'];
+            const advances = ['patterns', 'jvm', 'memory management', 'garbage collection', 'concurrency', 'networking', 'security', 'cloud computing', 'big data', 'ml'];
+
+            let selectedLevel;
+            if (level === 'b') {
+                selectedLevel = beginners;
+            } else if (level === 'i') {
+                selectedLevel = intermediates;
+            } else {
+                selectedLevel = advances;
+            }
+
+            if (selectedLevel.includes(topic)) {
+                if (level === 'b') {
+                    LBeginner(topic, selectedLevel);
+                } else if (level === 'i') {
+                    LIntermediate(topic, selectedLevel);
+                } else {
+                    LAdvanced(topic, selectedLevel);
+                }
+            } else {
+                document.getElementById('output').innerHTML = '<p>Invalid Topic for the selected level.</p>';
+            }
+        }
+    </script>
+
+    <label for="levelSelect">Select the level:</label>
+    <select id="levelSelect">
+        <option value="b">Beginner</option>
+        <option value="i">Intermediate</option>
+        <option value="a">Advanced</option>
+    </select><br>
+
+    <label for="topicSelect">Select the topic where you left:</label>
+    <select id="topicSelect">
+        <option value="syntax">Syntax</option>
+        <option value="variables">Variables</option>
+        <option value="data types">Data Types</option>
+        <option value="operators">Opeartors</option>
+        <option value="control flow">Control Flow</option>
+        <option value="strings">Strings</option>
+        <option value="exception">Exception</option>
+        <option value="files">Files</option>
+        <option value="oop">OOP</option>
+        <option value="inheritance">Inheritance</option>
+        <option value="polymorphism">Polymorphism</option>
+        <option value="collections">Collections</option>
+        <option value="generics">Generics</option>
+        <option value="reflection">Reflection</option>
+        <option value="annotation">Annotation</option>
+        <option value="junit">JUnit</option>
+        <option value="mockito">Mockito</option>
+        <option value="hamcrest">Hamcrest</option>
+        <option value="springboot">Springboot</option>
+        <option value="hibernate">Hibernate</option>
+        <option value="jpa">JPA</option>
+        <option value="servlet">Servlet</option>
+        <option value="jsp">JSP</option>
+        <option value="patterns">Patterns</option>
+        <option value="jvm">JVM</option>
+        <option value="memory management">Memory Management</option>
+        <option value="garbage collection">Garbage Collection</option>
+        <option value="concurrency">Concurrency</option>
+        <option value="networking">Networking</option>
+        <option value="security">Security</option>
+        <option value="cloud computing">Cloud Computing</option>
+        <option value="big data">Big Data</option>
+        <option value="ml">ML</option>
+    </select><br>
+
+    <button onclick="selectLevel()">Submit</button>
+</body>
+</html>

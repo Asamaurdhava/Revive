@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="menu-icon" id="menuIcon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="menu" id="menu">
+        <a href="#">Profile</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+    </div>
+
+    <div class="create-syllabus">
+        <a href="#">Create My Syllabus</a>
+    </div>
+
+    <div class="glass-rectangle">
+        <h2>Revive</h2>
+        <!-- Add the search bars in a row -->
+        <div class="search-bar-row">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+    </div>
+
+    <h1>Study what you really have to!</h1>
+       <h3> Get your personalized syllabus now!</h3>
+</body>
+</html>
+
+<script>
+    const menuIcon = document.getElementById('menuIcon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('active');
+        if (menuIcon.classList.contains('active')) {
+            menu.style.right = '0';
+        } else {
+            menu.style.right = '-250px';
+        }F
+    });
+
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        document.body.classList.add('bg2');
+        document.body.classList.remove('bg1');
+    } else {
+        document.body.classList.add('bg1');
+        document.body.classList.remove('bg2');
+    }
+});
+    
+
+</script>
+<script src="scripts.js"></script>
+
+
+
