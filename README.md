@@ -92,7 +92,7 @@ Project Revive was successfully presented at SunHacks 2023 at Arizona State Univ
 
 ## 👥 Team
 
-**Collaborator:** Harsh Vaishya - [@______](https://github.com/______)
+**Collaborator:** Harsh Vaishya - [@Harsh Vaishya](https://github.com/VHarshB)
 
 ## 🎨 Technical Highlights
 
