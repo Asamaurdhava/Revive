@@ -6,18 +6,18 @@
 
 A learning assistant system designed to help neophyte and beginner programmers efficiently restart or continue their programming education journey through personalized curriculum recommendations.
 
-## Project Overview
+## 🔍 Project Overview
 
 Project Revive addresses a common challenge in programming education: knowing where to pick up after a learning break or understanding what topics to study next. The system analyzes a user's current knowledge level and previously learned topics, then generates a customized learning path to optimize their study progression.
 
-### Core Features
+## ✨ Core Features
 
 - **Learning Progress Assessment** - Evaluates user's current knowledge across beginner, intermediate, and advanced levels
 - **Personalized Study Plans** - Generates tailored syllabi based on individual learning gaps
 - **Topic Progression Tracking** - Maps learning journey across comprehensive programming curricula
 - **Interactive Learning Interface** - Clean, responsive design with glassmorphism UI elements
 
-## Technical Implementation
+## 🛠️ Technical Implementation
 
 ### Frontend Architecture
 - **HTML5** - Semantic structure and accessibility
@@ -42,7 +42,7 @@ LIntermediate(learned, intermediates)  // Intermediate level gap identification
 LAdvanced(learned, advances)     // Advanced level curriculum planning
 ```
 
-## User Experience
+## 🎯 User Experience
 
 ### Learning Assessment Process
 1. **Level Selection** - Choose current proficiency level (Beginner/Intermediate/Advanced)
@@ -56,7 +56,7 @@ LAdvanced(learned, advances)     // Advanced level curriculum planning
 - **Dynamic Backgrounds** - Scroll-triggered visual transitions
 - **Accessibility Focus** - Semantic HTML and intuitive user interactions
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 project-revive/
@@ -67,7 +67,7 @@ project-revive/
 └── README.md              # Project documentation
 ```
 
-## Installation & Usage
+## 🚀 Installation & Usage
 
 1. **Clone the repository:**
    ```bash
@@ -86,20 +86,42 @@ project-revive/
    - Choose your last completed topic
    - Receive personalized learning recommendations
 
-## SunHacks 2023 Recognition
+## 🏆 SunHacks 2023 Recognition
 
 Project Revive was successfully presented at SunHacks 2023 at Arizona State University, demonstrating innovative solutions for programming education challenges. The project addresses real-world learning gaps through technology-driven curriculum personalization.
 
-## Team
+## 👥 Team
 
 **Collaborator:** Harsh Vaishya - [@______](https://github.com/______)
 
-## Technical Highlights
+## 🎨 Technical Highlights
 
 - **Algorithm Efficiency** - Optimized topic progression logic
 - **User Interface Design** - Modern glassmorphism with smooth animations
 - **Responsive Architecture** - Cross-device compatibility
 - **Educational Focus** - Evidence-based learning progression methodology
+
+## ⚖️ Copyright & Usage Notice
+
+**Original Work:** This project represents original collaborative work by the authors. **The core concept, algorithm, and implementation approach are the intellectual property of the authors and are NOT licensed for use.**
+
+**Viewing Permitted:**
+- ✅ Educational study and learning
+- ✅ Code review and analysis
+- ✅ Reference for learning programming concepts
+
+**Prohibited Use:**
+- ❌ Any form of reproduction or redistribution
+- ❌ Commercial or non-commercial deployment
+- ❌ Forking or creating derivative works
+- ❌ Using code in other projects
+- ❌ Removal of author attribution
+
+**All Rights Reserved:** This code is protected intellectual property. No permission is granted to use, modify, or distribute this work.
+
+For any inquiries regarding this project, please contact the authors directly:
+- **Vishesh Singh Rajput** - [eruditevsr@gmail.com](mailto:eruditevsr@gmail.com)
+- **Harsh Vaishya** - [@______](https://github.com/______)
 
 ---
 
