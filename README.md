@@ -121,8 +121,7 @@ Project Revive was successfully presented at SunHacks 2023 at Arizona State Univ
 
 For any inquiries regarding this project, please contact the authors directly:
 - **Vishesh Singh Rajput** - [eruditevsr@gmail.com](mailto:eruditevsr@gmail.com)
-- **Harsh Vaishya** - [@______](https://github.com/______)
-
+- **Harsh Vaishya** - [@Harsh Vaishya](https://github.com/VHarshB)
 ---
 
 *Empowering programmers to efficiently navigate their learning journey through intelligent curriculum personalization.*
